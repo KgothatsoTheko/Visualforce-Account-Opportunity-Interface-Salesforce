@@ -1,0 +1,39 @@
+<apex:page controller="AccountListController" showHeader="true" sidebar="false">
+  <style>
+    .container { max-width:1000px; margin:20px auto; font-family: Arial, sans-serif; }
+    h1 { color:#16325c; margin-bottom:8px; }
+    .acct-table { width:100%; border-collapse: collapse; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .acct-table th { text-align:left; padding:10px; background:#f4f7fb; border-bottom:1px solid #e1e6ef; color:#16325c; }
+    .acct-table td { padding:10px; border-bottom:1px solid #eef3fb; }
+    .acct-table tr:hover { background:#fbfdff; }
+    .badge { display:inline-block; padding:4px 8px; border-radius:12px; background:#eef6ff; color:#0b4f9a; font-weight:600; }
+    .count { font-weight:700; color:#0b4f9a; }
+    .top-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+  </style>
+
+  <div class="container">
+    <div class="top-row">
+      <h1>Accounts — Opportunity Summary</h1>
+      <div class="badge">Showing up to {!limitSize} accounts</div>
+    </div>
+
+    <table class="acct-table">
+      <thead>
+        <tr>
+          <th>Account Name</th>
+          <th>Industry</th>
+          <th style="width:140px"># of Opportunities</th>
+        </tr>
+      </thead>
+      <tbody>
+        <apex:repeat value="{!accounts}" var="aw">
+          <tr>
+            <td><a href="/{!aw.acc.Id}" target="_blank">{!aw.acc.Name}</a></td>
+            <td>{!aw.safeIndustry}</td>
+            <td class="count">{!aw.oppCount}</td>
+          </tr>
+        </apex:repeat>
+      </tbody>
+    </table>
+  </div>
+</apex:page>

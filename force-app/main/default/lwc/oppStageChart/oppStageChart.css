@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bar-label {
+  width: 120px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bar-track {
+  flex: 1;
+  background: #f4f7fb;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ea1ff, #0b69d6);
+  border-radius: 9px;
+  transition: width 300ms ease;
+}
+.bar-count {
+  width: 48px;
+  text-align: right;
+  font-weight: 700;
+  color: #0b4f9a;
+}
+.error {
+  color: #a82600;
+}
