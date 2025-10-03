@@ -6,6 +6,12 @@ The solution combines **Visualforce** for tabular account data and a **Lightning
 
 ---
 
+## 🚀 How to Access
+- **Visualforce Page**: https://resourceful-fox-63tu19-dev-ed.trailblaze.my.salesforce-sites.com/
+- **Opportunity Chart**: 
+
+---
+
 ## ⚙️ Features Implemented
 1. **Visualforce Page (`AccountListVF`)**
    - Displays Accounts with:
