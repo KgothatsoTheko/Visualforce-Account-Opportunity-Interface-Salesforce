@@ -29,8 +29,6 @@ The solution combines **Visualforce** for tabular account data and a **Lightning
 ---
 
 ## 📸 Screenshots
-(Add screenshots for submission, e.g.,:)
-
 1. Account List Visualforce Page:
    <img width="1358" height="680" alt="Screenshot 2025-10-03 094546" src="https://github.com/user-attachments/assets/7aa1ba05-2099-479f-941f-8820bc66adc5" />
 
