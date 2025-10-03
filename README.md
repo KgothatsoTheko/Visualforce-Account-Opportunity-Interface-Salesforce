@@ -1,49 +1,62 @@
 # TechCo Services - Account & Opportunity Interface
 
 ## 📌 Project Overview
-This project was built for **TechCo Services** to give account managers a clean, user-friendly interface for viewing **Accounts** and **Opportunities**.  
-The solution combines **Visualforce** and **Lightning Web Components (LWC)** for maximum flexibility and usability.  
+This project was built for **TechCo Services** to provide account managers a clean, user-friendly interface for viewing **Accounts** and **Opportunities**.  
+The solution combines **Visualforce** for tabular account data and a **Lightning Web Component (LWC)** for a graphical summary of opportunities by stage.  
 
 ---
 
 ## ⚙️ Features Implemented
-1. **Visualforce Page**
+1. **Visualforce Page (`AccountListVF`)**
    - Displays Accounts with:
-     - Account Name
-     - Industry
+     - Account Name (clickable link)
+     - Industry (shows "—" if blank)
      - Number of Opportunities  
 
-2. **Lightning Web Component**
-   - Chart of Opportunities grouped by Stage.  
-   - Built using **Chart.js** for interactive visuals.  
+2. **Lightning Web Component (`oppStageChart`)**
+   - Displays a **bar chart** of Opportunities grouped by Stage.  
+   - Uses **CSS-based bars** for simplicity and responsiveness.  
 
 3. **Integration**
-   - LWC embedded into a **Lightning Page** for managers.  
+   - LWC can be embedded into a **Lightning Page** via App Builder for easy access.  
 
 4. **Testing**
-   - Verified with multiple user profiles.  
+   - Verified with multiple user profiles to ensure correct data visibility.  
 
 5. **Styling**
-   - Basic CSS for clean layout: headers, spacing, and colors.  
+   - Clean layout with custom CSS: headers, spacing, colors, hover effects.  
 
 ---
 
 ## 📸 Screenshots
 (Add screenshots for submission, e.g.,:)
 
-1. AccountOverview Visualforce Page:
-   
-2. Opportunity Chart (LWC):
-   
-3. Embedded Lightning Page:
-   
+1. Account List Visualforce Page:
+   <img width="1358" height="680" alt="Screenshot 2025-10-03 094546" src="https://github.com/user-attachments/assets/7aa1ba05-2099-479f-941f-8820bc66adc5" />
+
+2. Opportunity Stage Chart (LWC):
+   <img width="1348" height="675" alt="Screenshot 2025-10-03 094859" src="https://github.com/user-attachments/assets/c93843e3-0b14-4e53-9a49-1f23e77bc89c" />
+
+3. Lightning Page with Embedded LWC:
+   <img width="1330" height="613" alt="Screenshot 2025-10-03 094636" src="https://github.com/user-attachments/assets/50729587-489e-4f1c-ba13-0afa7d4e729c" />
 
 ---
 
 ## 🚀 How to Use
-1. Deploy Apex classes, Visualforce page, and LWC to your Salesforce org.  
-2. Assign the Lightning page with the embedded LWC to the **App Builder**.  
-3. Open the Visualforce page (`/apex/AccountOverview`) to view Accounts.  
-4. Use the **Sales Dashboard page** to view the Opportunity chart.  
+1. Deploy the following from this repository to your Salesforce org:
+   - Apex classes:
+     - `AccountListController`
+     - `OpportunityStageController`
+   - Visualforce page: `AccountListVF`
+   - LWC: `oppStageChart`
+2. Add `oppStageChart` to a **Lightning Page** via App Builder.  
+3. Open the Visualforce page at `/apex/AccountListVF` to view Accounts.  
+4. Access the Lightning page to view the Opportunities chart.  
 
 ---
+
+## 🛠️ Technologies Used
+- Salesforce **Visualforce**
+- Salesforce **Apex**
+- Salesforce **Lightning Web Components (LWC)**
+- HTML, CSS for layout and styling
